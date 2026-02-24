@@ -52,7 +52,6 @@ header { /* Estiliza o cabeçalho */
 .git{
   color: white;
   font-size: 28px;
-  transform: scale(1.2);
 }
 
 .navegacao { /* Container da lista de navegação */
