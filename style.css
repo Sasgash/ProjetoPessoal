@@ -5,6 +5,16 @@
   transition: all 0.3s ease;
 }
 
+
+:root {
+  --bg-main: #181818;
+  --bg-card: #1e1e1e;
+  --green-primary: #28ac00;
+  --green-hover: #00ff88;
+  --text-main: #f5f5f5;
+  --text-soft: #bdbdbd;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -13,6 +23,10 @@ body { /* Estiliza o corpo inteiro da página */
   font-family: 'Segoe UI', sans-serif; /* Define a fonte principal do site */
   background-color: #181818; /* Cor de fundo geral (tema escuro) */
   color: #f5f5f5; /* Cor padrão dos textos */
+}
+
+p {
+  color: var(--text-soft);
 }
 
 header { /* Estiliza o cabeçalho */
@@ -34,12 +48,12 @@ header { /* Estiliza o cabeçalho */
 
 
 .git:hover{
-  color: rgb(0, 172, 0);
+  color: var(--green-primary);
   transform: scale(1.2);
 }
 
 .linkedin:hover{
-  color: rgb(0, 172, 0);
+  color: var(--green-primary);
   transform: scale(1.2);
 }
 
@@ -68,13 +82,14 @@ nav a { /* Estiliza links dentro do nav */
   color: rgb(255, 255, 255); /* Cor do texto dos links */
   padding: 10px 15px; /* Área clicável maior */
   text-decoration: none; /* Remove sublinhado */
-  font-family: fantasy; /* Fonte decorativa para links */
+  font-weight: 600;
+  letter-spacing: 1px; /* Fonte decorativa para links */
   font-size: 20px; /* Tamanho da fonte */
   transition: 0.3s; /* Suaviza animações (hover) */
 }
 
 nav a:hover { /* Quando passa o mouse no link */
-  color:rgb(40, 172, 0); /* Muda cor para vermelho */
+  color:var(--green-primary); /* Muda cor para vermelho */
   transform: scale(1.2);
 }
 
@@ -118,20 +133,20 @@ nav a:hover { /* Quando passa o mouse no link */
 .comeco-link{
   background-color: #181818;
   border-radius: 35px;
-  border: rgb(51, 197, 21) solid 2px;
+  border: var(--green-primary) solid 2px;
   padding: 20px;
   text-decoration: none;
-  color: green;
+  color: var(--green-primary);
   box-shadow: 0 5px 10px rgba(245, 245, 245, 0.3);
 
 }
 
 .comeco-link:hover{
-  background-color: rgb(0, 128, 0);
+  background-color: var(--green-primary);
   color: #181818;
-  transform: scale(1.2);
+  transform: scale(1.5);
   border-color: #000;
-  box-shadow: 0 10px 15px rgba(88, 247, 101, 0.5);
+  box-shadow: 0 10px 15px var(--green-hover);
 
 }
 
@@ -139,7 +154,7 @@ nav a:hover { /* Quando passa o mouse no link */
   flex: 1; /* Permite ocupar espaço no layout flex */
   max-width: 100%; /* Impede imagem de ultrapassar container */
   border-radius: 20px; /* Cantos arredondados */
-  box-shadow: 0 10px 30px rgba(88, 247, 101, 0.5); /* Sombra para profundidade */
+  box-shadow: 0 10px 30px var(--green-primary); /* Sombra para profundidade */
   transition: transform 0.8s;
   transform-style: preserve-3d;
   position: relative;
@@ -187,7 +202,7 @@ nav a:hover { /* Quando passa o mouse no link */
   height: 300px;
   perspective: 1000px;
   font-family: sans-serif;
-  box-shadow: rgb(40, 172, 0);
+  box-shadow: var(--green-hover);
 }
 
 .title {
@@ -196,6 +211,7 @@ nav a:hover { /* Quando passa o mouse no link */
   text-align: center;
   margin: 0;
   padding-top: 10px;
+  color: #fff;
 }
 
 .flip-card-inner {
@@ -226,14 +242,12 @@ nav a:hover { /* Quando passa o mouse no link */
 }
 
 .flip-card-front {
-  background: linear-gradient(120deg, rgb(122, 122, 122) 60%, rgb(0, 0, 0) 88%,
-     rgb(122, 119, 119) 40%, rgb(0, 0, 0) 48%);
+  background: #1e1e1e;
   color: rgb(255, 255, 255);
 }
 
 .flip-card-back {
-  background: linear-gradient(120deg, rgb(255, 255, 255) 60%, rgb(97, 97, 97) 88%,
-     rgb(32, 32, 32) 40%, rgb(97, 96, 96) 48%);
+  background: #1e1e1e;
   color: rgb(0, 0, 0);
   transform: rotateY(180deg);
 }
@@ -243,6 +257,7 @@ nav a:hover { /* Quando passa o mouse no link */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 80px;
 }
 
@@ -268,13 +283,13 @@ nav a:hover { /* Quando passa o mouse no link */
 }
 
 .hard-container, .soft-container{
-  background-color: #666565;
-  border-radius: 10px;
-  width: 550px;
-  height: 350px;
-  box-shadow: 0 10px 30px rgba(88, 247, 101, 0.5);
-  border: 2px solid rgb(40, 172, 0);
-  padding-left: 25px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .hard-container:hover{
@@ -389,8 +404,3 @@ footer {
   font-size: 20px;
   color: rgb(40, 172, 0);
 }
-
-
-
-
-
