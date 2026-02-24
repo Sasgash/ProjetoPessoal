@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
     <title>Meu portifólio</title>
 </head>
 
 <body>
     <header>
-        <div class="app">
-            <nav class="navegacao">
-                <a href="#">Início</a>
-                <a href="#">Sobre</a>
-                <a href="#">Skills</a>
-            </nav>
+
+
+        <nav class="navegacao">
+            <a href="#inicio">Início</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#skills">Skills</a>
+            <a href="#mais-informacoes">Mais informações</a>
+        </nav>
+        <div class="links-navegacao">
+            <a href="https://www.linkedin.com/in/gabriel-fernandes-de-abreu-141a31286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Sasgash" target="_blank" class="git"><i class="fa-brands fa-github"></i></a>
+        </div>
+
     </header>
-    <section class="inicio">
+    <section class="inicio" id="inicio">
         <div class="conteudo-inicio">
             <h1 class="titulo">
                 Bem vindo ao meu portifólio!
@@ -35,24 +44,104 @@
                 dentificação de vulnerabilidades, análise de incidentes e melhoria contínua da postura de segurança de
                 sistemas.
             </p>
-      
-               
-            
-            <div class="icones-tela">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+            <div class="container-comeco">
+            <a href="#experiencia" class="comeco-link">Vamos começar</a>
             </div>
-             <a href="#" class="btn">Curriculo</a>
         </div>
-            
 
-        <div>
-            <img class="imagem-leon" src="leon.png">
+
+
+
+        <!--<a href="#" class="btn">Curriculo</a>
+        </div>-->
+
+        <div class="imagem-container">
+            <img class="imagem-leon" src="leon.png" alt="Imagem do Leon">
         </div>
     </section>
-
-
-
+    <section class="experiencia" id="experiencia">
+        <div class="titulo-experiencia">
+            <h1>Minhas experiencias no mercado de trabalho:</h1>
+        </div>
+        <div class="container-card">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="title">Hospital Orizonti</p>
+                        <p>Estagirário de suporte de sistemas </p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Principais atividades:</p>
+                        <ul class="lista-orizonti">
+                            <li>Contato direto com ambientes críticos, reforçando boas práticas de segurança da
+                                informação e controle de acesso.</li>
+                            <li>Apoio à equipe de TI na melhoria de processos e estabilidade do sistema, garantindo
+                                disponibilidade e integridade das informações.</li>
+                            <li>Análise de dados operacionais utilizando SQL, Excel e Power BI para apoio à tomada de
+                                decisão.</li>
+                            <li>Suporte técnico a sistema hospitalar (Tasy), atuando na resolução de incidentes e
+                                suporte a usuários.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="title">TJMG</p>
+                        <p>Estagirário de suporte de sistemas </p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">BACK</p>
+                        <div class="lista-tjmg">
+                            <li>Suporte técnico a sistema hospitalar (Tasy), atuando na resolução de incidentes e
+                                suporte a usuários.</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="soft-container">
+            <h1 class="titulo-soft">Soft skills:</h1>
+            <div class="lista-soft">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </div>
+        </div>
+        <div class="hard-container">
+            <h1 class="titulo-hard">Hard skills:</h1>
+            <div class="lista-hard">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </div>
+        </div>
+    </section>
+    <section id="mais-informacoes">
+        <footer>
+            <div class="conteudo-footer">
+                <h3 class="footer-titulo">Contato</h3>
+                <ul class="links-contatos">
+                    <li>
+                        <i class="fa-solid fa-square-phone"></i>
+                        <button class="telefone-btn" onclick="copiarTelefone()">Telefone para contato - (31)99107-1964</button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-inbox"></i>
+                        <button class="email-btn" onclick="copiarEmail()">Email para contato - gabriel.fernandes.abreu17@gmail.com</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-curriculo">
+            <h3 class="footer-titulo">Para mais informações baixe meu currículo!</h3>
+            <i class="fa-solid fa-file"></i>
+            <a class="btn-curriculo" href="Curriculo.pdf" download target="_blank">Baixar currículo</a>
+            </div>
+        </footer>
+    </section>
     </div>
 </body>
 
