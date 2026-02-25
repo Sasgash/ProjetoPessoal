@@ -36,6 +36,7 @@ header { /* Estiliza o cabeçalho */
   width: 100%; /* Ocupa toda a largura da tela */
   padding: 10px 10%; /* Espaçamento interno (vertical 10px, horizontal proporcional) */
   height: 70px; /* Altura fixa do header */
+  justify-content: space-between;
   display: flex;
   align-items: center;
   z-index: 1000;
@@ -44,6 +45,7 @@ header { /* Estiliza o cabeçalho */
 .links-navegacao {
   display: flex;
   gap: 20px;
+  align-items: flex-end;
 }
 
 
@@ -70,12 +72,11 @@ header { /* Estiliza o cabeçalho */
 
 .navegacao { /* Container da lista de navegação */
   display: flex; /* Ativa Flexbox (layout flexível) */
-  justify-content: center; /* Centraliza itens horizontalmente */
+  justify-content: flex-start; /* Centraliza itens horizontalmente */
   align-items: center; /* Centraliza itens verticalmente */
   list-style: none; /* Remove bolinhas da lista */
   gap: 20px; /* Espaço entre os itens */
   padding: 0%; /* Remove padding padrão */
-  margin: 0 auto;
 }
 
 nav a { /* Estiliza links dentro do nav */
@@ -198,20 +199,28 @@ nav a:hover { /* Quando passa o mouse no link */
 
 .flip-card {
   background-color: transparent;
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   perspective: 1000px;
   font-family: sans-serif;
-  box-shadow: var(--green-hover);
+
 }
 
 .title {
+  margin-bottom: 20px;
   font-size: 1.5em;
   font-weight: 900;
   text-align: center;
   margin: 0;
   padding-top: 10px;
   color: #fff;
+}
+
+.title-back{
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .flip-card-inner {
@@ -221,6 +230,7 @@ nav a:hover { /* Quando passa o mouse no link */
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  
 }
 
 .flip-card:hover .flip-card-inner {
@@ -228,7 +238,6 @@ nav a:hover { /* Quando passa o mouse no link */
 }
 
 .flip-card-front, .flip-card-back {
-  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -238,7 +247,7 @@ nav a:hover { /* Quando passa o mouse no link */
   backface-visibility: hidden;
   border: 2px solid rgb(40, 172, 0);
   border-radius: 1rem;
-  
+  box-shadow: 0 10px 30px #28ac00;
 }
 
 .flip-card-front {
@@ -248,7 +257,7 @@ nav a:hover { /* Quando passa o mouse no link */
 
 .flip-card-back {
   background: #1e1e1e;
-  color: rgb(0, 0, 0);
+  color: #e5e5e5;
   transform: rotateY(180deg);
 }
 
@@ -258,15 +267,31 @@ nav a:hover { /* Quando passa o mouse no link */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 65px;
 }
 
 .lista-orizonti, .lista-tjmg{
   list-style-position: inside;
   text-align: left; 
-  padding: 10px;
-  font-weight: 600;
-  line-height: 1.6;
+  font-size: 1.2rem; /* Tamanho do texto */
+  line-height: 1.6; /* Espaçamento entre linhas (legibilidade) */
+  opacity: 0.8;
+  margin-left:25px ; 
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+ul:not(.links-contatos) li::before {
+  content: "▹";
+  color: #00ff88;
+  margin-right: 10px;
 }
 
 
@@ -285,8 +310,7 @@ nav a:hover { /* Quando passa o mouse no link */
 .hard-container, .soft-container{
   background: var(--bg-card);
   border-radius: 16px;
-  width: 100%;
-  max-width: 450px;
+  width: 600px;
   padding: 30px;
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 15px 40px rgba(0,0,0,0.4);
@@ -312,6 +336,9 @@ nav a:hover { /* Quando passa o mouse no link */
 
 .lista-soft, .lista-hard{
   list-style-position: inside;
+  font-size: 1.2rem; /* Tamanho do texto */
+  line-height: 1.6; /* Espaçamento entre linhas (legibilidade) */
+  opacity: 0.8; /
 }
 
 footer {
@@ -344,6 +371,7 @@ footer {
   flex-direction: column;
   gap: 12px;
 }
+
 
 .links-contatos li {
   display: flex;
