@@ -11,6 +11,7 @@
   --bg-card: #1e1e1e;
   --green-primary: #28ac00;
   --green-hover: #00ff88;
+  --box-shadow: rgba(88, 247, 101, 0.5);
   --text-main: #f5f5f5;
   --text-soft: #bdbdbd;
 }
@@ -29,6 +30,8 @@ p {
   color: var(--text-soft);
 }
 
+/*Header/nav*/
+
 header { /* Estiliza o cabeçalho */
   background-color: #000000; /* Cor de fundo do header */
   position: fixed; /* Mantém o header fixo no topo ao rolar a página */
@@ -42,6 +45,16 @@ header { /* Estiliza o cabeçalho */
   z-index: 1000;
 }
 
+/*
+.imagem-logo{
+  align-items: flex-start;
+  margin-right: 100px;
+}
+
+.imagem-logo img{
+  height: 70px;
+}
+*/
 .links-navegacao {
   display: flex;
   gap: 20px;
@@ -94,6 +107,8 @@ nav a:hover { /* Quando passa o mouse no link */
   transform: scale(1.2);
 }
 
+/*Home*/
+
 .inicio { /* Seção principal (hero) */
   min-height: 100vh; /* Altura mínima = altura da tela */
   display: flex; /* Layout flexível */
@@ -139,7 +154,10 @@ nav a:hover { /* Quando passa o mouse no link */
   text-decoration: none;
   color: var(--green-primary);
   box-shadow: 0 5px 10px rgba(245, 245, 245, 0.3);
+}
 
+.comeco-link i{
+  margin-left: 10px;
 }
 
 .comeco-link:hover{
@@ -151,11 +169,13 @@ nav a:hover { /* Quando passa o mouse no link */
 
 }
 
+/*Imagem leon*/
+
 .imagem-leon { /* Imagem principal */
   flex: 1; /* Permite ocupar espaço no layout flex */
   max-width: 100%; /* Impede imagem de ultrapassar container */
   border-radius: 20px; /* Cantos arredondados */
-  box-shadow: 0 10px 30px var(--green-primary); /* Sombra para profundidade */
+  box-shadow: 0 10px 30px var(--box-shadow); /* Sombra para profundidade */
   transition: transform 0.8s;
   transform-style: preserve-3d;
   position: relative;
@@ -174,6 +194,8 @@ nav a:hover { /* Quando passa o mouse no link */
   width: 4rem; /* Largura do container */
   height: 4rem; /* Altura do container */
 }
+
+/*Experiencia*/
 
 .experiencia { /* Seção principal (hero) */
   min-height: 100vh; /* Altura mínima = altura da tela */
@@ -247,8 +269,9 @@ nav a:hover { /* Quando passa o mouse no link */
   backface-visibility: hidden;
   border: 2px solid rgb(40, 172, 0);
   border-radius: 1rem;
-  box-shadow: 0 10px 30px #28ac00;
-}
+  box-shadow: 0 10px 30px var(--box-shadow);
+} 
+
 
 .flip-card-front {
   background: #1e1e1e;
@@ -276,7 +299,8 @@ nav a:hover { /* Quando passa o mouse no link */
   font-size: 1.2rem; /* Tamanho do texto */
   line-height: 1.6; /* Espaçamento entre linhas (legibilidade) */
   opacity: 0.8;
-  margin-left:25px ; 
+  margin-left:25px;
+  margin-right: 25px; 
 }
 
 ul{
@@ -341,6 +365,8 @@ ul:not(.links-contatos) li::before {
   opacity: 0.8; /
 }
 
+/*Footer*/
+
 footer {
   background-color: #000;
   width: 100%;
@@ -351,6 +377,10 @@ footer {
 
   padding: 0 10%;
   justify-content: space-between;
+}
+
+.experiencia{
+  box-shadow: #bdbdbd;
 }
 
 .conteudo-footer {
@@ -413,6 +443,8 @@ footer {
   font-size: 15px;
   padding: 10px;
   text-decoration: none;
+  border-top: 2px solid #545454;   /* parte clara em cima */
+  border-left: 2px solid #545454;
 }
 
 
@@ -426,6 +458,7 @@ footer {
 .link-curriculo{
   font-size: 1.5rem;
   margin-bottom: 60px;
+  
 }
 
 .link-curriculo i{
